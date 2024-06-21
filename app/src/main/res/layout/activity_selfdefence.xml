@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+
+
+    >
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@drawable/graddiant">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_special"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12sp"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:id="@+id/mainHeading"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/graddiant"
+            android:orientation="vertical"
+
+
+            >
+
+            <ImageView
+                android:layout_width="253dp"
+                android:layout_height="122dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:padding="15dp"
+                android:id="@+id/mainlogo"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="401dp"
+            android:layout_height="134dp"
+            android:background="@drawable/graddiant"
+            android:padding="15sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12sp"
+                android:id="@+id/role"
+                android:textColor="@color/black" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/graddiant"
+            android:padding="15sp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Secretary"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="12sp"
+                />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="280dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/secyimg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/secyname"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
