@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import de.hdodenhof.circleimageview.CircleImageView
@@ -22,8 +23,8 @@ class NameActivity : AppCompatActivity() {
         usernameEditText = findViewById(R.id.username_edit_text)
         profileImageView = findViewById(R.id.logo)
 
-        val saveButton: Button = findViewById(R.id.save)
-        val nextButton: Button = findViewById(R.id.next)
+        val saveButton: TextView = findViewById(R.id.save)
+        val nextButton: TextView = findViewById(R.id.next)
 
         saveButton.setOnClickListener {
             val name = usernameEditText.text.toString()
