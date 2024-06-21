@@ -21,14 +21,14 @@ class EventActivity : AppCompatActivity() {
         val searchEditText: EditText = findViewById(R.id.searchEditText)
         dataList=ArrayList()
 
-        dataList.add(Event("21-25\n JUNE","Prometeo","https://unstop.com/college-fests/prometeo24-indian-institute-of-technology-iit-jodhpur-176818", R.drawable.img ))
-        dataList.add(Event("21-25\n JUNE","IGNUS","https://www.ignus.co.in/", R.drawable.ignus ))
-        dataList.add(Event("21-25\n JUNE","Aaftaab","https://www.instagram.com/aaftaab_iitj/?hl=en", R.drawable.aaftaab))
-        dataList.add(Event("21-25\n JUNE","Varchas","https://www.varchas23.in/", R.drawable.varchas ))
-        dataList.add(Event("21-25\n JUNE","Spandan","https://www.instagram.com/spandan_iitj/", R.drawable.spandan ))
-        dataList.add(Event("21-25\n JUNE","Intellia","https://intellia-website.vercel.app/", R.drawable.intellia ))
-        dataList.add(Event("21-25\n JUNE","Edificio","https://www.linkedin.com/company/edificio-iit-jodhpur/?originalSubdomain=in", R.drawable.edificio ))
-        dataList.add(Event("21-25\n JUNE","Kridansh","https://www.instagram.com/bss.iitj/p/B9eEkuaJTV0/", R.drawable.kridansh ))
+        dataList.add(Event("CMNG\n SOON","Prometeo","https://unstop.com/college-fests/prometeo24-indian-institute-of-technology-iit-jodhpur-176818", R.drawable.img ))
+        dataList.add(Event("CMNG\n SOON","IGNUS","https://www.ignus.co.in/", R.drawable.ignus ))
+        dataList.add(Event("CMNG\n SOON","Aaftaab","https://www.instagram.com/aaftaab_iitj/?hl=en", R.drawable.aaftaab))
+        dataList.add(Event("CMNG\n SOON","Varchas","https://www.varchas23.in/", R.drawable.varchas ))
+        dataList.add(Event("CMNG\n SOON","Spandan","https://www.instagram.com/spandan_iitj/", R.drawable.spandan ))
+        dataList.add(Event("CMNG\n SOON","Intellia","https://intellia-website.vercel.app/", R.drawable.intellia ))
+        dataList.add(Event("CMNG\n SOON","Edificio","https://www.linkedin.com/company/edificio-iit-jodhpur/?originalSubdomain=in", R.drawable.edificio ))
+        dataList.add(Event("CMNG\n SOON","Kridansh","https://www.instagram.com/bss.iitj/p/B9eEkuaJTV0/", R.drawable.kridansh ))
 
 
 
