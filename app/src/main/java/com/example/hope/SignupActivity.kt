@@ -45,7 +45,11 @@ class SignupActivity : AppCompatActivity() {
             val confirmPassword = confirmPasswordEditText.text.toString()
 
             if (password == confirmPassword) {
-                registerWithEmail(email, password, username)
+                if (email.endsWith("@iitj.ac.in")) {
+                    registerWithEmail(email, password, username)
+                } else {
+                    Toast.makeText(this, "Please use your institute email to sign up.", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
             }
@@ -101,7 +105,12 @@ class SignupActivity : AppCompatActivity() {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
                 val account = task.getResult(ApiException::class.java)
-                firebaseAuthWithGoogle(account.idToken!!)
+                if (account.email?.endsWith("@iitj.ac.in") == true) {
+                    firebaseAuthWithGoogle(account.idToken!!)
+                } else {
+                    Toast.makeText(this, "Please use your institute email to sign in.", Toast.LENGTH_SHORT).show()
+                    googleSignInClient.signOut()  // Sign out if the email is not from the institute
+                }
             } catch (e: ApiException) {
                 Toast.makeText(this, "Google Sign In Failed", Toast.LENGTH_SHORT).show()
             }
