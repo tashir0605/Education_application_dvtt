@@ -25,16 +25,16 @@
 
                 android:src="@drawable/ic_profile" />
 
-    <TextView
-        android:id="@+id/welcomeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/profileImageView"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="Hi, Username"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/welcomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@id/profileImageView"
+                android:text="Hi, Username"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/menuIcon"
@@ -46,23 +46,25 @@
                 android:contentDescription="Menu"
                 android:src="@drawable/ic_menu" />
 </RelativeLayout>
-    <TextView
-        android:textSize="25sp"
-        android:id="@+id/academicsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Academics"
-        android:gravity="center"
-        android:padding="25sp"
-        android:background="@drawable/roundcorner"
-        android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/academicsButton"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+
+            android:background="@drawable/roundcorner"
+            android:gravity="center"
+            android:padding="25sp"
+            android:text="Academics"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
 
     <TextView
         android:textSize="25sp"
         android:id="@+id/aboutCollegeButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="12sp"
         android:text="About College"
         android:padding="25sp"
@@ -74,7 +76,7 @@
         android:textSize="25sp"
         android:id="@+id/eventButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="12sp"
         android:text="Events"
         android:gravity="center"

@@ -91,6 +91,8 @@ class ProfileActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.nav_about_us -> {
                     // Handle About Us navigation
+                    val intent = Intent(this, AboutUsActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.nav_contact_us -> {
                     // Handle Contact Us navigation

@@ -26,6 +26,10 @@
     <color name="primaryColor">#1E88E5</color>
     <color name="primaryDarkColor">#1565C0</color>
     <color name="accentColor">#FF4081</color>
+    <color name="primaryColour">#6200EE</color>
+    <color name="primaryDarkColour">#3700B3</color>
+    <color name="acentColor">#03DAC5</color>
+    <color name="backgroundGray">#F5F5F5</color>
     <color name="textColor">#FFFFFF</color>
     <color name="special">#D9D9D9</color>
     <color name="primary_color">#517593</color>

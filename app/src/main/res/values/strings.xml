@@ -7,4 +7,31 @@
     <string name="find_amazing_events">Find Amazing events happening around you.</string>
     <string name="search_hint">Search for an event...</string>
     <string name="location"></string>
+    <string name="about_us">About Us</string>
+    <string name="welcome_message">
+
+Welcome to CampusSync! Your one-stop app for college academics, events, and student body. Stay informed and connected!</string>
+    <string name="meet_the_team">Meet the Team:</string>
+    <string name="vishwendra">Vishwendra (B. Tech. Chemical)</string>
+    <string name="dikshant">Dikshant Jha (BS Physics)</string>
+    <string name="tashir">Tashir Ahmad(B. Tech. Mechanical)</string>
+    <string name="addressing_need">Need:</string>
+    <string name="need_description"><![CDATA[College students face several challenges:<br/><br/>
+
+        &#8226; <b>Scattered Information: </b>Academic updates and event details are spread across multiple platforms.<br/><br/>
+        &#8226; <b>Poor Communication:</b> Ineffective communication leads to missed opportunities and misunderstandings. <br/><br/>
+        &#8226; <b>Low Engagement:</b> Students often miss out on events due to lack of timely information.<br/><br/>
+        &#8226; <b>Disconnected Community: </b> Without a unified platform, it’s difficult to foster a sense of community and support among students.<br/><br/>
+        These issues highlight the need for a comprehensive app to streamline and enhance the college experience.
+        ]]>
+    </string>
+    <string name="our_initiative">Our Initiative:</string>
+    <string name="initiative_description"><![CDATA[CampusSync addresses this by providing:<br/><br/>
+
+        &#8226; <b>Centralized Information:</b> Access all academic updates, event details, and Student Body info in one place.<br/><br/>
+        &#8226; <b>Seamless Communication:</b> Stay connected with your peers and student leaders effortlessly.<br/><br/>
+        &#8226; <b>Enhanced Engagement:</b> Easily discover and participate in events and activities around campus.<br/><br/>
+        &#8226; <b>Simplified Experience:</b> Streamline your college experience with a user-friendly and comprehensive app.<br/><br/>
+        CampusSync ensures you stay informed, connected, and engaged, making your college journey smoother and more enjoyable.
+        ]]></string>
 </resources>
