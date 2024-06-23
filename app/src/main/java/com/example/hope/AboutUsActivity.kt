@@ -27,7 +27,7 @@ class AboutUsActivity : AppCompatActivity() {
 
         // Set click listeners
         instagramTashir.setOnClickListener {
-            openUrl("https://www.instagram.com/aditya_profile")
+            openUrl("https://www.instagram.com/tashir_8108/")
         }
 
         linkedinTashir.setOnClickListener {
@@ -38,7 +38,7 @@ class AboutUsActivity : AppCompatActivity() {
 
         // Set click listeners
         instagramDikshant.setOnClickListener {
-            openUrl("https://www.instagram.com/aditya_profile")
+            openUrl("https://www.instagram.com/dikshant_965/")
         }
 
         linkedinDikshant.setOnClickListener {
@@ -49,7 +49,7 @@ class AboutUsActivity : AppCompatActivity() {
 
         // Set click listeners
         instagramVishwendra.setOnClickListener {
-            openUrl("https://www.instagram.com/aditya_profile")
+            openUrl("https://www.instagram.com/okay_vishwendra/")
         }
 
         linkedinVishwendra.setOnClickListener {
