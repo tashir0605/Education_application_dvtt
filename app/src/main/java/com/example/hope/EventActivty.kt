@@ -28,7 +28,7 @@ class EventActivity : AppCompatActivity() {
         dataList.add(Event("CMNG\n SOON","Spandan","https://www.instagram.com/spandan_iitj/", R.drawable.spandan ))
         dataList.add(Event("CMNG\n SOON","Intellia","https://intellia-website.vercel.app/", R.drawable.intellia ))
         dataList.add(Event("CMNG\n SOON","Edificio","https://www.linkedin.com/company/edificio-iit-jodhpur/?originalSubdomain=in", R.drawable.edificio ))
-        dataList.add(Event("CMNG\n SOON","Kridansh","https://www.instagram.com/bss.iitj/p/B9eEkuaJTV0/", R.drawable.kridansh ))
+        dataList.add(Event("CMNG\n SOON","Kridansh","https://play.google.com/store/apps/details?id=com.kridansh.app&hl=en_GB&pli=1", R.drawable.kridansh ))
 
 
 
