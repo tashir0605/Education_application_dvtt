@@ -22,45 +22,57 @@
         android:orientation="vertical"
         tools:ignore="ExtraText">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@drawable/bg_special"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Board of Student Welfare"
-                android:textColor="@color/white"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:layout_margin="14dp"
+            android:background="@drawable/new_design"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:background="@color/newcolor"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="14dp">
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image1"
+                android:layout_width="161dp"
+                android:src="@drawable/bsww"
+                android:layout_height="161dp"
+                android:layout_marginTop="-90dp"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="4dp" />
+
             <TextView
-                android:id="@+id/role"
+                android:id="@+id/subheading1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-                android:text="Board of Student Welfare fljaljfdlkanfl kcjasl kfdj lacjflksjf;
-Board of Student Welfare fljaljfdlkanfl kcjasl kfdj lacjflksjf;
-Board of Student Welfare fljaljfdlkanfl kcjasl kfdj lacjflksjf;
-Board of Student Welfare fljaljfdlkanfl kcjasl kfdj lacjflksjf;"
-                />
+                android:text="Board of Student Welfare"
+                android:textSize="18sp">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="The Board of Student Welfare (BSW) at IIT Jodhpur is dedicated to supporting and enhancing the overall well-being of students. The BSW provides a wide range of services, including mental health counseling, academic support, health and wellness programs, and financial aid assistance. It also organizes various cultural, sports, and recreational activities to promote a balanced and enriching student life. The Student Welfare Coordinators (SWC), a team of proactive students within the BSW, work tirelessly to address student concerns and implement initiatives that improve the campus experience. By fostering a supportive environment and addressing the diverse needs of students, the BSW ensures that every student at IIT Jodhpur can thrive both personally and academically"
+                android:textSize="12sp">
+            </TextView>
         </LinearLayout>
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,11 +100,11 @@ Board of Student Welfare fljaljfdlkanfl kcjasl kfdj lacjflksjf;"
                 android:id="@+id/head"
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="10dp"
-                android:background="@drawable/roundcorner"
+
                 android:layout_marginTop="20dp"
-                android:textColor="@color/white"
+
                 android:textSize="20sp"
-                android:text="Heads"/>
+                android:text="@string/heads"/>
         </LinearLayout>
 
         <LinearLayout
@@ -123,11 +135,11 @@ Board of Student Welfare fljaljfdlkanfl kcjasl kfdj lacjflksjf;"
                 android:id="@+id/ahs"
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="10dp"
-                android:background="@drawable/roundcorner"
+
                 android:layout_marginTop="20sp"
-                android:textColor="@color/white"
+
                 android:textSize="20sp"
-                android:text="Assistant Heads"/>
+                android:text="@string/assistant_heads"/>
 
         </LinearLayout>
         <LinearLayout
@@ -157,10 +169,9 @@ Board of Student Welfare fljaljfdlkanfl kcjasl kfdj lacjflksjf;"
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="10dp"
                 android:layout_marginTop="20sp"
-                android:background="@drawable/roundcorner"
-                android:textColor="@color/white"
+
                 android:textSize="20sp"
-                android:text="Student Guide"/>
+                android:text="@string/student_guide"/>
 
         </LinearLayout>
         <LinearLayout

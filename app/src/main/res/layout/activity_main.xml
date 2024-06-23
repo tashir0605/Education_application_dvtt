@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginLeft="0dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -27,7 +27,7 @@
             android:gravity="center"
             android:paddingTop="0dp"
 
-            android:text="Enigma"
+            android:text="Campus Sync"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="24sp"

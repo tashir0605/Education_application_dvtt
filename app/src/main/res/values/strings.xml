@@ -7,4 +7,7 @@
     <string name="find_amazing_events">Find Amazing events happening around you.</string>
     <string name="search_hint">Search for an event...</string>
     <string name="location"></string>
+    <string name="heads"><u>Heads</u></string>
+    <string name="student_guide"><u>Student Guide</u></string>
+    <string name="assistant_heads"><u>Assistant Heads</u></string>
 </resources>
