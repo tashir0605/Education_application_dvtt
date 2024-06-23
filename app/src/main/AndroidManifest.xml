@@ -22,6 +22,9 @@
         <activity android:name=".EventActivity"
             android:exported="true"
             />
+        <activity android:name=".ContactUsActivity"
+            android:exported="true"
+            />
         <activity
             android:name=".NameActivity"
             android:exported="false" />

@@ -96,6 +96,8 @@ class ProfileActivity : AppCompatActivity() {
                 }
                 R.id.nav_contact_us -> {
                     // Handle Contact Us navigation
+                    val intent = Intent(this, ContactUsActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.nav_logout -> {
                     // Handle Logout navigation
