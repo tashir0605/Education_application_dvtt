@@ -116,7 +116,4 @@
         android:textColor="#6681E5"
         android:textSize="23dp"
         android:text="Notes"/>
-
-
-
 </LinearLayout>
