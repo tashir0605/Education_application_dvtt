@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -24,26 +25,26 @@ class SectionB : AppCompatActivity() {
         }
 
 
-        val embutton = findViewById<TextView>(R.id.button_mechanics)
+        val embutton = findViewById<CardView>(R.id.button_mechanics)
         embutton.setOnClickListener {
             val intent = Intent(this, em::class.java)
             startActivity(intent)
 
         }
-        val eobutton = findViewById<TextView>(R.id.button_eo)
+        val eobutton = findViewById<CardView>(R.id.button_eo)
         eobutton.setOnClickListener {
             val intent = Intent(this, eo::class.java)
             startActivity(intent)
 
         }
-        val chembutton = findViewById<TextView>(R.id.button_chemistry)
+        val chembutton = findViewById<CardView>(R.id.button_chemistry)
         chembutton.setOnClickListener {
             val intent = Intent(this, chem::class.java)
             startActivity(intent)
 
         }
 
-        val mathbutton = findViewById<TextView>(R.id.button_math)
+        val mathbutton = findViewById<CardView>(R.id.button_math)
         mathbutton.setOnClickListener {
             val intent = Intent(this, math2::class.java)
             startActivity(intent)

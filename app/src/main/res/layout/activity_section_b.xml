@@ -6,59 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@drawable/graddiant"
+
     >
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/bg_special"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Academics"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
-
-    </LinearLayout>
-<!--    <RelativeLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="16dp">-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/profile_image"-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:layout_alignParentStart="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:background="?android:attr/selectableItemBackgroundBorderless"-->
-<!--            android:contentDescription="Profile Image" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/welcomeTextView"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentTop="true"-->
-<!--            android:layout_marginStart="40dp"-->
-<!--            android:layout_marginLeft="100dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:layout_toEndOf="@+id/profile_image"-->
-<!--            android:text="Hi, Username"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textStyle="bold" />-->
-
-
-
-<!--    </RelativeLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,7 +21,7 @@
             android:layout_weight="1"
             android:padding="20dp"
             android:textColor="@color/black"
-            android:background="@drawable/special_graddient"
+            android:background="#F0F0F0"
             android:text="Section A"
             android:textStyle="bold"
             android:textSize="15sp"/>
@@ -83,62 +32,176 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="20dp"
-            android:background="@drawable/bg_special"
+            android:background="#DFDFDF"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="#335DF4"
+
             android:text="Section B" />
     </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
 
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:padding="20dp"
+        android:id="@+id/button_chemistry"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#E3E2E2"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:src="@drawable/chem">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#616161"
+                android:textSize="20sp"
+               android:text="Chemistry"
+                android:layout_marginTop="25dp">
+
+            </TextView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#E3E2E2"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:id="@+id/button_mechanics"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:src="@drawable/engineeringmechanics">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#616161"
+                android:textSize="20sp"
+                android:text="EM"
+                android:layout_marginTop="25dp">
+
+            </TextView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
     <LinearLayout
-        android:id="@+id/section_a_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:visibility="visible">
+        android:orientation="horizontal"
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/button_mechanics"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             android:padding="20dp"
-            android:background="@drawable/roundcorner"
-            android:text="Engineering Mechanics"
-            android:textColor="@android:color/white" />
-
-        <TextView
-            android:id="@+id/button_eo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:padding="20dp"
-            android:background="@drawable/roundcorner"
-            android:text="Electromagetism and optics"
-            android:textColor="@android:color/white" />
-
-        <TextView
-            android:id="@+id/button_chemistry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:padding="20dp"
-            android:background="@drawable/roundcorner"
-            android:text="Chemistry"
-            android:textColor="@android:color/white" />
-
-        <TextView
+            android:layout_margin="20dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="#E3E2E2"
+            app:cardCornerRadius="20dp"
+            android:clickable="true"
             android:id="@+id/button_math"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:padding="20dp"
-            android:background="@drawable/roundcorner"
-            android:text="Mathematics"
-            android:textColor="@android:color/white" />
 
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/mat">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#616161"
+                    android:textSize="20sp"
+                    android:text="Mathematics"
+                    android:layout_marginTop="25dp">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="#E3E2E2"
+            app:cardCornerRadius="20dp"
+            android:clickable="true"
+            android:id="@+id/button_eo"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/phy">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#616161"
+                    android:textSize="20sp"
+                    android:text="EO"
+                    android:layout_marginTop="25dp">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
+
 
 </LinearLayout>
