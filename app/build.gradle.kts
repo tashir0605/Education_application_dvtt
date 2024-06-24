@@ -92,5 +92,6 @@ dependencies{
     implementation(libs.firebase.database.ktx)
     implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
     implementation ("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("androidx.core:core-splashscreen:1.0.0")
 }
 

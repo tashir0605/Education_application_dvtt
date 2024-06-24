@@ -10,81 +10,100 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:background="@drawable/gradient4"
         tools:context=".MainActivity">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#8EA2EA"
+            android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImageView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-
-                android:src="@drawable/ic_profile" />
-
-            <TextView
-                android:id="@+id/welcomeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="30dp"
-                android:layout_toEndOf="@id/profileImageView"
-                android:text="Hi, Username"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_width="match_parent"
+                android:layout_height="188dp"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/menuIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="16dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="36dp"
+
                 android:layout_marginEnd="16dp"
                 android:contentDescription="Menu"
-                android:src="@drawable/ic_menu" />
-</RelativeLayout>
+                android:src="@drawable/ic_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="530dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="-90dp"
+            android:background="@drawable/circle_background">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="-180dp"
+            android:layout_marginEnd="150dp"
+            android:gravity="center"
+            android:text="Hi Username"
+            android:textSize="20sp"
+            android:textColor="#697FCF"
+            android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/academicsButton"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="100dp"
-            android:layout_marginTop="25dp"
-
-            android:background="@drawable/roundcorner"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/subject_background"
             android:gravity="center"
-            android:padding="25sp"
+            android:padding="20sp"
             android:text="Academics"
-            android:textColor="@android:color/white"
+            android:textColor="#8EA2EA"
             android:textSize="25sp" />
 
     <TextView
         android:textSize="25sp"
         android:id="@+id/aboutCollegeButton"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:text="About College"
-        android:padding="25sp"
+        android:padding="20sp"
         android:gravity="center"
-
-        android:background="@drawable/roundcorner"
-        android:textColor="@android:color/white" />
+        android:elevation="14dp"
+        android:background="@drawable/subject_background"
+        android:textColor="#8EA2EA" />
 
     <TextView
         android:textSize="25sp"
         android:id="@+id/eventButton"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
         android:text="Events"
         android:gravity="center"
-
-        android:padding="25sp"
-        android:background="@drawable/roundcorner"
-        android:textColor="@android:color/white" />
+        android:padding="20sp"
+        android:background="@drawable/subject_background"
+        android:textColor="#8EA2EA"/>
 
 
 
