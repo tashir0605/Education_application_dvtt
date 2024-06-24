@@ -13,7 +13,7 @@ class chem : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ib)
+        setContentView(R.layout.activity_chem)
 
         db = FirebaseFirestore.getInstance()
 
