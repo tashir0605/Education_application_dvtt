@@ -181,7 +181,7 @@ class RecyclerViewMovieAdapter(
             "Basketball Society" -> "Basketball Society"
             "Chess Society" -> "Chess Society"
             "Cricket Society" -> "Cricket Society"
-            "E-Sports Society" -> "E-Sports Society"
+            "E-Sports Society" -> "E-Sports Society" // Replace with the actual club ID
             "Kabaddi Society" -> "Kabaddi Society"
             "VolleyBall Society" -> "VolleyBall Society"
             "Table Tennis Society" -> "Table Tennis Society"
@@ -189,6 +189,9 @@ class RecyclerViewMovieAdapter(
             "Lawn Tennis Society" -> "Lawn Tennis Society"
             "Athletic Society" -> "Athletic Society"
 
+            "Cycling Club" -> "Cycling Club"
+            "Self defence Club" -> "Self defence Club"
+            "LitSoc" -> "LitSoc"
             else -> ""
         }
     }

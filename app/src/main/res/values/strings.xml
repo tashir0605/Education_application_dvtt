@@ -37,4 +37,18 @@ Welcome to CampusSync! Your one-stop app for college academics, events, and stud
         &#8226; <b>Simplified Experience:</b> Streamline your college experience with a user-friendly and comprehensive app.<br/><br/>
         CampusSync ensures you stay informed, connected, and engaged, making your college journey smoother and more enjoyable.
         ]]></string>
+    <string name="secretary"><u>Secretary</u></string>
+    <string name="joint_secretary"><u>Joint-Secretary</u></string>
+    <string name="overall_coordinators"><u>Overall-Coordinators</u></string>
+    <string name="men_s_captian"><u>Men\'s Captian</u></string>
+    <string name="men"><u>Men</u></string>
+    <string name="men_s_vice_captian"><u>Men\'s Vice Captian</u></string>
+    <string name="women"><u>Women</u></string>
+    <string name="women_s_captian"><u>Women\'s Captian</u></string>
+    <string name="women_s_vice_captian"><u>Women\'s Vice Captian</u></string>
+    <string name="word_games_club_head">Word Games Club Head</string>
+    <string name="oratory_club_head">Oratory Club Head</string>
+    <string name="book_club_head">Book Club Head</string>
+    <string name="creative_writing_and_poetry_club_head">Creative Writing and Poetry Club Head</string>
+    <string name="goonj_head">Goonj Head</string>
 </resources>

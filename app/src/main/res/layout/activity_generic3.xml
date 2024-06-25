@@ -13,68 +13,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:orientation="vertical"
-        android:background="@drawable/graddiant">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_special"
+            android:layout_margin="14dp"
+            android:background="@drawable/new_design"
             android:gravity="center_horizontal"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="12sp"
-                android:textColor="@color/white"
-                android:textSize="35sp"
-                android:id="@+id/mainHeading"
-                />
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/graddiant"
             android:orientation="vertical"
+            android:padding="8dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:background="@color/newcolor"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="14dp">
+            </LinearLayout>
 
-            >
-
-            <ImageView
-                android:layout_width="253dp"
-                android:layout_height="122dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:padding="15dp"
-                android:id="@+id/mainlogo"/>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="401dp"
-            android:layout_height="134dp"
-            android:background="@drawable/graddiant"
-            android:padding="15sp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mainlogo"
+                android:layout_width="161dp"
+                android:layout_height="161dp"
+                android:layout_marginTop="-90dp"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="4dp" />
 
             <TextView
+                android:id="@+id/mainHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12sp"
+                android:textColor="@color/black"
+                android:textSize="18sp">
+            </TextView>
+
+            <TextView
                 android:id="@+id/role"
-                android:textColor="@color/black" />
-
-
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:textSize="12sp">
+            </TextView>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/graddiant"
             android:padding="15sp"
             android:orientation="vertical"
             android:gravity="center_horizontal"
@@ -83,8 +70,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Secretary"
+                android:textColor="#686565"
+                android:text="@string/secretary"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginBottom="12sp"
@@ -101,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:id="@+id/secyname"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 />
 
         </LinearLayout>
@@ -111,7 +98,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/graddiant"
+
             android:padding="17sp"
             android:orientation="vertical"
             android:gravity="center_horizontal"
@@ -119,10 +106,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Men"
+                android:textColor="#686565"
+                android:text="@string/men"
                 android:textStyle="bold"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:layout_marginBottom="12sp"
                 />
 
@@ -130,10 +117,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Men's Captian"
+                android:textColor="#686565"
+                android:text="@string/men_s_captian"
                 android:textStyle="bold"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:layout_marginBottom="12sp"
                 />
 
@@ -153,17 +140,17 @@
                 android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/mencaptain"
-                android:textSize="20sp"
-
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"
 
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Men's Vice Captian"
+                android:textColor="#686565"
+                android:text="@string/men_s_vice_captian"
                 android:textStyle="bold"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:layout_marginBottom="12sp"
                 />
             <ImageView
@@ -179,26 +166,27 @@
                 android:id="@+id/menvicecaptain"
                 android:textSize="15sp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
 
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Women"
+                android:textColor="#686565"
+                android:text="@string/women"
                 android:textStyle="bold"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:layout_marginBottom="12sp"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Women's Captian"
+                android:textColor="#686565"
+                android:text="@string/women_s_captian"
                 android:textStyle="bold"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:layout_marginBottom="12sp"
                 />
 
@@ -206,25 +194,23 @@
                 android:layout_width="200dp"
                 android:layout_height="280dp"
                 android:id="@+id/womencaptainimg"
-
-
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="#686565"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/womencaptain"
-                android:textSize="20sp"
-
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"
 
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="Women's Vice Captian"
+                android:textColor="#686565"
+                android:text="@string/women_s_vice_captian"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginBottom="12sp"
@@ -241,10 +227,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="#686565"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/womenvicecaptai"
-                android:textSize="20sp"
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"
 
 
                 />
