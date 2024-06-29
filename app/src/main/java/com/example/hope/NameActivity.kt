@@ -1,11 +1,9 @@
 package com.example.hope
 
-
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -27,36 +25,34 @@ class NameActivity : AppCompatActivity() {
         val nextButton: TextView = findViewById(R.id.next)
 
         saveButton.setOnClickListener {
-            val name = usernameEditText.text.toString()
-            if (name.isEmpty()) {
-                Toast.makeText(this, "Please enter a username", Toast.LENGTH_SHORT).show()
-            } else {
-                // Save the username in SharedPreferences
-                val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
-                val editor = sharedPreferences.edit()
-                editor.putString("Username", name)
-                editor.apply()
-                Toast.makeText(this, "Username saved", Toast.LENGTH_SHORT).show()
-                Log.d("NameActivity", "Username saved: $name")
-            }
+            saveUsername()
         }
 
         nextButton.setOnClickListener {
-            val name = usernameEditText.text.toString()
-            if (name.isEmpty()) {
-                Toast.makeText(this, "Please enter a username", Toast.LENGTH_SHORT).show()
-            } else {
-                // Save the username in SharedPreferences
-                val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
-                val editor = sharedPreferences.edit()
-                editor.putString("Username", name)
-                editor.apply()
-
+            if (saveUsername()) {
                 // Start ProfileActivity with the username
                 val intent = Intent(this, ProfileActivity::class.java)
-                intent.putExtra("USERNAME", name)
                 startActivity(intent)
+                finish()
             }
         }
     }
+
+    private fun saveUsername(): Boolean {
+        val name = usernameEditText.text.toString()
+        if (name.isEmpty()) {
+            Toast.makeText(this, "Please enter a username", Toast.LENGTH_SHORT).show()
+            return false
+        } else {
+            // Save the username in SharedPreferences
+            val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putString("Username", name)
+            editor.apply()
+            Toast.makeText(this, "Name saved", Toast.LENGTH_SHORT).show()
+            Log.d("NameActivity", "Username saved: $name")
+            return true
+        }
+    }
 }
+

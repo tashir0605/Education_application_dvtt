@@ -1,13 +1,12 @@
 package com.example.hope
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
@@ -19,6 +18,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Check if the user is already logged in
+        val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+        val savedEmail = sharedPreferences.getString("Email", null)
+        val savedUsername = sharedPreferences.getString("Username", null)
+
+        if (savedEmail != null && savedUsername != null) {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
 
         setContentView(R.layout.activity_main)
         FirebaseApp.initializeApp(this)
@@ -28,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         val loginButton: TextView = findViewById(R.id.login_button)
-        val signUpButton:TextView= findViewById(R.id.signup_button)
+        val signUpButton: TextView = findViewById(R.id.signup_button)
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
@@ -44,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         signUpButton.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
+
         }
     }
 
@@ -51,13 +62,13 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val user = auth.currentUser
                     val sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE)
                     val editor = sharedPreferences.edit()
                     editor.putString("Email", email)
                     editor.apply()
 
                     val intent = Intent(this, NameActivity::class.java)
+                    intent.putExtra("EMAIL", email)
                     startActivity(intent)
                     finish()
                 } else {
@@ -66,3 +77,4 @@ class MainActivity : AppCompatActivity() {
             }
     }
 }
+
