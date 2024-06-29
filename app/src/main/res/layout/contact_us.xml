@@ -107,8 +107,8 @@
             android:layout_height="wrap_content"
 
             android:drawableLeft="@drawable/ic_email"
-            android:text="campussync6223@gmail.com"
-android:layout_marginLeft="33dp"
+            android:text="dvt22156@gmail.com"
+android:layout_marginLeft="71dp"
 
 
             android:textColor="@color/black"
