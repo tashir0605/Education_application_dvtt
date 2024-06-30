@@ -5,34 +5,53 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class selfdefence : AppCompatActivity() {
+    private lateinit var db: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_selfdefence)
-        val heading = intent.getStringExtra("mainheading")
-        val image = intent.getStringExtra("mainimage")
-        val role = intent.getStringExtra("role")
-        val secyname = intent.getStringExtra("secyname")
-        val secyImageUrl = intent.getStringExtra("secyimg")
+
+        db = Firebase.firestore
+
         val headingTextView: TextView = findViewById(R.id.mainHeading)
         val roleofclub: TextView = findViewById(R.id.role)
         val imageView: ImageView = findViewById(R.id.mainlogo)
         val secy: TextView = findViewById(R.id.secyname)
         val secyImg: ImageView = findViewById(R.id.secyimg)
 
-        headingTextView.text = heading
-        roleofclub.text = role
-        Glide.with(this)
-            .load(image)
-            .into(imageView)
-        Glide.with(this)
-            .load(secyImageUrl)
-            .into(secyImg)
-        secy.text = secyname
+        fetchSelfDefenceData { data ->
+            headingTextView.text = data["mainheading"] as String?
+            roleofclub.text = data["role"] as String?
+            Glide.with(this)
+                .load(data["mainimage"] as String?)
+                .into(imageView)
+            Glide.with(this)
+                .load(data["secyimg"] as String?)
+                .into(secyImg)
+            secy.text = data["secyname"] as String?
+        }
+    }
+
+    private fun fetchSelfDefenceData(callback: (Map<String, Any>) -> Unit) {
+        db.collection("Clubs")
+            .document("selfdefence")
+            .get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    callback(document.data ?: emptyMap())
+                } else {
+                    // Handle the case where the document does not exist
+                }
+            }
+            .addOnFailureListener { exception ->
+                // Handle any errors that occurred during the fetch
+            }
     }
 }
