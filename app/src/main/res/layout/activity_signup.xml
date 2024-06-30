@@ -38,7 +38,7 @@
         android:background="@drawable/round_corner"
         android:drawableLeft="@drawable/ic_account_circle"
         android:drawablePadding="8dp"
-        android:hint="Username"
+        android:hint="Name"
         android:padding="12dp"
         android:textSize="23dp"
         android:textStyle="bold" />
