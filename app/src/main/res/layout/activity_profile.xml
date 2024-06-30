@@ -14,7 +14,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="#8EA2EA"
+            android:background="@color/newcolor"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -72,7 +72,7 @@
             android:gravity="center"
             android:padding="20sp"
             android:text="Academics"
-            android:textColor="#8EA2EA"
+            android:textColor="@color/newcolor"
             android:textSize="25sp" />
 
     <TextView
@@ -85,9 +85,8 @@
         android:text="About College"
         android:padding="20sp"
         android:gravity="center"
-        android:elevation="14dp"
         android:background="@drawable/subject_background"
-        android:textColor="#8EA2EA" />
+        android:textColor="@color/newcolor" />
 
     <TextView
         android:textSize="25sp"
@@ -100,7 +99,7 @@
         android:gravity="center"
         android:padding="20sp"
         android:background="@drawable/subject_background"
-        android:textColor="#8EA2EA"/>
+        android:textColor="@color/newcolor"/>
 
 
 

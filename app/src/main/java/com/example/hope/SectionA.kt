@@ -42,4 +42,5 @@ class SectionA : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

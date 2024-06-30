@@ -3,40 +3,22 @@ package com.example.hope
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
 
 class litsoc : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_litsoc)
-        val heading = intent.getStringExtra("mainheading")
-        val image = intent.getStringExtra("mainimage")
-        val role = intent.getStringExtra("role")
-        val secyname = intent.getStringExtra("secyname")
-        val secyImageUrl = intent.getStringExtra("secyimg")
-        val wgch = intent.getStringExtra("wgch")
-        val wgchImageUrl = intent.getStringExtra("wgchimg")
-        val och = intent.getStringExtra("och")
-        val ochImageUrl = intent.getStringExtra("ochimg")
-        val bch = intent.getStringExtra("bch")
-        val bchImageUrl = intent.getStringExtra("bchiimg")
-        val cwpch = intent.getStringExtra("cwpch")
-        val cwpchImageUrl = intent.getStringExtra("cwpchiimg")
-        val goonj= intent.getStringExtra("goonj")
-        val goonjImageUrl = intent.getStringExtra("goonjiimg")
 
+        db = FirebaseFirestore.getInstance()
 
-
-
+        // Initialize your views
         val headingTextView: TextView = findViewById(R.id.mainHeading)
-        val roleofclub: TextView= findViewById(R.id.role)
+        val roleofclub: TextView = findViewById(R.id.role)
         val imageView: ImageView = findViewById(R.id.mainlogo)
         val secy: TextView = findViewById(R.id.secyname)
         val secyImg: ImageView = findViewById(R.id.secyimg)
@@ -51,40 +33,32 @@ class litsoc : AppCompatActivity() {
         val cwpchname: TextView = findViewById(R.id.cwpc)
         val goonjname: TextView = findViewById(R.id.goonj)
 
-
-
-
-
-
-        headingTextView.text = heading
-        roleofclub.text = role
-        Glide.with(this)
-            .load(image)
-            .into(imageView)
-        Glide.with(this)
-            .load(secyImageUrl)
-            .into(secyImg)
-        secy.text = secyname
-        Glide.with(this)
-            .load(wgchImageUrl)
-            .into(wgchImg)
-        wgchname.text = wgch
-         Glide.with(this)
-            .load(ochImageUrl)
-            .into(ochImg)
-        ochname.text = och
-        Glide.with(this)
-            .load(bchImageUrl)
-            .into(bchImg)
-        bchname.text = bch
-        Glide.with(this)
-            .load(cwpchImageUrl)
-            .into(cwpchImg)
-        cwpchname.text = cwpch
-        Glide.with(this)
-            .load(goonjImageUrl)
-            .into(goonjImg)
-        goonjname.text = goonj
-
+        // Fetch data from Firestore document with ID "LitSoc"
+        db.collection("Clubs").document("LitSoc")
+            .get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    headingTextView.text = document.getString("mainheading")
+                    roleofclub.text = document.getString("role")
+                    Glide.with(this).load(document.getString("mainimage")).into(imageView)
+                    Glide.with(this).load(document.getString("secyimg")).into(secyImg)
+                    secy.text = document.getString("secyname")
+                    Glide.with(this).load(document.getString("wgchimg")).into(wgchImg)
+                    wgchname.text = document.getString("wgch")
+                    Glide.with(this).load(document.getString("ochimg")).into(ochImg)
+                    ochname.text = document.getString("och")
+                    Glide.with(this).load(document.getString("bchiimg")).into(bchImg)
+                    bchname.text = document.getString("bch")
+                    Glide.with(this).load(document.getString("cwpchiimg")).into(cwpchImg)
+                    cwpchname.text = document.getString("cwpch")
+                    Glide.with(this).load(document.getString("goonjiimg")).into(goonjImg)
+                    goonjname.text = document.getString("goonj")
+                } else {
+                    // Handle case where document does not exist
+                }
+            }
+            .addOnFailureListener { exception ->
+                // Handle any errors
+            }
     }
 }
