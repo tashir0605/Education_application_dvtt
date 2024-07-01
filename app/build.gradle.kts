@@ -74,6 +74,7 @@ dependencies {
     implementation ("com.google.android.material:material:1.4.0")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("com.firebase:firebase-client-android:2.5.2")
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
