@@ -21,15 +21,13 @@ class math2 : AppCompatActivity() {
         val textViewMinor1 = findViewById<TextView>(R.id.minor1)
         val textViewMinor2 = findViewById<TextView>(R.id.minor2)
         val textViewMajor = findViewById<TextView>(R.id.major)
-        val textViewProfessor = findViewById<TextView>(R.id.professor_grading_system)
-        val textViewNotes = findViewById<TextView>(R.id.notes)
+
 
         textViewQuiz.setOnClickListener { openPdf("quiz_math2") }
         textViewMinor1.setOnClickListener { openPdf("minor1_math2") }
         textViewMinor2.setOnClickListener { openPdf("minor2_math2") }
         textViewMajor.setOnClickListener { openPdf("major_math2") }
-        textViewProfessor.setOnClickListener { openPdf("professor_math2") }
-        textViewNotes.setOnClickListener { openPdf("notes_math2") }
+
     }
 
     private fun openPdf(documentId: String) {
